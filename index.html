@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Movie</title>
+
+    <link rel="stylesheet" href="./style.css" >
+
+</head>
+<body>
+    <div>
+        <h1 id="title">Movie Spot</h1>
+    </div>
+    <div class="img-container">
+        <img id="img" src="./anim main.png">     
+    </div>
+    <div>
+        <label for="name">Movie</label>
+        <input type="text" id="userInput" name="name">
+        <button id="next-button">Try</button>
+        <div>
+            <p id="message"></p>
+        </div>
+    </div>
+    <div class="score">
+        <p id="stage">0</p>
+        <progress id="myProgress" value="1" max="24"></progress>
+        </div>
+    <script src="./movies.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
