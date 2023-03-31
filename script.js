@@ -23,23 +23,29 @@ function showSeries(index) {
 showSeries(currentIndex);
 
 function checkSeries() {
-    const userInput = input.value;
-      if (userInput === movies[currentIndex].name) {
-        successToast();
-        document.getElementById("message").textContent = yesses[getRandomInt(0, yesses.length - 1)];
-        currentIndex++;
-        input.value = "";
-        showSeries(currentIndex);
-        return;
-      
+  const userInput = input.value.toLowerCase();
+  const possibleNames = movies[currentIndex].name;
+
+
+  for (let i = 0; i < possibleNames.length; i++) {
+    if (userInput === possibleNames[i].toLowerCase()) {
+      successToast();
+      document.getElementById("message").textContent = yesses[getRandomInt(0, yesses.length - 1)];
+      currentIndex++;
+      input.value = "";
+      showSeries(currentIndex);
+      return;
     }
-    
-    errorToast();
-    document.getElementById("message").textContent = `Your final score is ${currentIndex}. Try again!` 
-    currentIndex = 0;
-    showSeries(currentIndex);
-    
   }
+
+  // si aucune correspondance n'est trouvée
+  errorToast();
+  document.getElementById("message").textContent = `Your final score is ${currentIndex}. Try again!` 
+  currentIndex = 0;
+  input.value = "";
+  showSeries(currentIndex);
+}
+
 
 input.addEventListener("keydown", function(event) {
     if (event.code === "Enter") {
