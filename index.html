@@ -5,28 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess the Movie</title>
-
     <link rel="stylesheet" href="./style.css" >
 
 </head>
 <body>
-    <div>
-        <h1 id="title">Movie Spot</h1>
-    </div>
-    <div class="img-container">
-        <img id="img" src="./anim main.png">     
-    </div>
-    <div>
-        <label for="name">Movie</label>
-        <input type="text" id="userInput" name="name">
-        <button id="next-button">Try</button>
-        <div>
-            <p id="message"></p>
+    <div class="columns is-mobile is-centered">
+
+        <div class="column is-half">
+        <div class="columns is-vcentered">
+            <div class="column">
+            <img class="image is-96x96 is-clickable" onClick="refreshPage()" src="./img/MVSPT_logo.svg" />
+        </div>
+            <div class="box">
+            <div class="is-flex">
+            <img class="image is-24x24 mr-2" src="https://img.icons8.com/3d-fluency/94/null/trophy.png"/>
+            <p id="stage">0</p>
+            </div>
+            <div class="">
+            <progress class="progress is-small is-success" id="myProgress" value="1" max="24"></progress>
+        </div>
         </div>
     </div>
+    <div class="card" >
+    <div class="card-image">
+        <figure class="image image is-16by9">
+        <img id="img" src="">
+    </figure>     
+    </div>
+    <div class="card-content">
+        <div class="columns is-centered">
+            <div class="column is-half">
+        <div class="field has-addons">
+            <div class="control ">
+ <input class="input is-medium " placeholder="Where is it from?" type="text" size="20" id="userInput" name="name">
+            </div>
+            <div class="control">
+                 <button class="button is-black is-medium " id="next-button">Try</button>
+            </div>
+       </div>
+      </div>
+        </div>
+        
+    </div>
+</div>
     <div class="score">
-        <p id="stage">0</p>
-        <progress id="myProgress" value="1" max="24"></progress>
+        
+        
+        </div>  
+        </div>
+    </div>
+    <div id="snackbar">
+        <div class="columns is-vcentered">
+            <div class="column">
+                <div class="is-flex">
+                <img id="toast" class="image is-24x24 mr-2" src="https://img.icons8.com/3d-fluency/94/null/best-seller.png"/>
+                 <p id="message"></p>
+                </div>
+            </div>
+        </div>
+        
+    
         </div>
     <script src="./movies.js"></script>
     <script src="./script.js"></script>

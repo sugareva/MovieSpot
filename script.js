@@ -1,9 +1,11 @@
 
+
 let stage = document.getElementById('stage');
 let currentIndex = 0;
 let img = document.getElementById("img");
 const nextButton = document.querySelector("#next-button");
-const input = document.querySelector("#userInput")
+const input = document.querySelector("#userInput");
+let toastIcon = document.getElementById("toast");
 
 
 
@@ -14,7 +16,7 @@ function getRandomInt(min, max) {
 
 function showSeries(index) {
     img.src = movies[index].image;
-    stage.textContent = `Lieux trouvés : ${currentIndex} / ${movies.length}`;
+    stage.textContent = `Current score : ${currentIndex} / ${movies.length}`;
     document.getElementById("myProgress").value = currentIndex; 
   }
 
@@ -23,14 +25,18 @@ showSeries(currentIndex);
 function checkSeries() {
     const userInput = input.value;
       if (userInput === movies[currentIndex].name) {
+        successToast();
         document.getElementById("message").textContent = yesses[getRandomInt(0, yesses.length - 1)];
         currentIndex++;
+        input.value = "";
         showSeries(currentIndex);
         return;
       
     }
+    
+    errorToast();
+    document.getElementById("message").textContent = `Your final score is ${currentIndex}. Try again!` 
     currentIndex = 0;
-    document.getElementById("message").textContent = "Sorry, you'll get better next time..."
     showSeries(currentIndex);
     
   }
@@ -91,3 +97,32 @@ let i = 0;
     "Great!",
     "Totally",
     ]
+
+
+    function successToast() {
+      // Get the snackbar DIV
+      toast.src = "https://img.icons8.com/3d-fluency/94/null/best-seller.png";
+      var x = document.getElementById("snackbar");
+    
+      // Add the "show" class to DIV
+      x.className = "show";
+    
+      // After 3 seconds, remove the show class from DIV
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    } 
+
+    function errorToast() {
+      // Get the snackbar DIV
+      toast.src = "https://img.icons8.com/3d-fluency/94/null/disappointed.png";
+      var x = document.getElementById("snackbar");
+
+      // Add the "show" class to DIV
+      x.className = "show";
+    
+      // After 3 seconds, remove the show class from DIV
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    } 
+
+    function refreshPage(){
+      window.location.reload();
+  } 
