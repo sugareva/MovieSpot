@@ -6,8 +6,10 @@ let img = document.getElementById("img");
 const nextButton = document.querySelector("#next-button");
 const input = document.querySelector("#userInput");
 let toastIcon = document.getElementById("toast");
+const infoIndex = document.getElementById("textIndex");
 
-
+infoIndex.textContent = `You have ${movies.length} pieces to find and each mistake makes you start again from the beginning. Several spellings are accepted,
+and the game does not take into account capital letters.`;
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -132,3 +134,57 @@ let i = 0;
     function refreshPage(){
       window.location.reload();
   } 
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Functions to open and close a modal
+    function openModal($el) {
+      $el.classList.add('is-active');
+    }
+  
+    function closeModal($el) {
+      $el.classList.remove('is-active');
+    }
+  
+    function closeAllModals() {
+      (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+        closeModal($modal);
+      });
+    }
+  
+    // Add a click event on buttons to open a specific modal
+    (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+      const modal = $trigger.dataset.target;
+      const $target = document.getElementById(modal);
+  
+      $trigger.addEventListener('click', () => {
+        openModal($target);
+      });
+    });
+  
+    // Add a click event on various child elements to close the parent modal
+    (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+      const $target = $close.closest('.modal');
+  
+      $close.addEventListener('click', () => {
+        closeModal($target);
+      });
+    });
+  
+    // Add a keyboard event to close all modals
+    document.addEventListener('keydown', (event) => {
+      const e = event || window.event;
+  
+      if (e.keyCode === 27) { // Escape key
+        closeAllModals();
+      }
+    });
+  });
+
+  function hover(element) {
+    element.src = "https://img.icons8.com/ios-glyphs/30/ffc700/info-squared.png";
+  }
+  
+  function unhover(element) {
+    element.src = 'https://img.icons8.com/ios-glyphs/30/null/info-squared.png';
+  }

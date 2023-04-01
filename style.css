@@ -1,12 +1,32 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;800&family=Roboto:ital,wght@0,400;0,900;1,300&display=swap');
 @import './node_modules/bulma/css/bulma.css';
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: #ffc700;
+
+  background-image:  linear-gradient(#ffd336 0.9px, transparent 0.9px), linear-gradient(to right, #ffd336 0.9px, #ffc700 0.9px);
+  background-size: 18px 18px;
+    min-height: 100vh;
     overflow: hidden;
-    height : 100vh;
+    padding-top : 3%;
 }
+.js-modal-trigger {
+  border : none;
+  background-color: transparent;
+}
+.modal-card {
+  top: 20%;
+}
+
+.logo {
+  transition: transform 250ms;
+  }
+  
+.logo:hover {
+    transform: translateY(-10px);
+  }
 
 
  /* The snackbar - position it at the bottom and in the middle of the screen */
@@ -30,8 +50,8 @@ body {
     visibility: visible; /* Show the snackbar */
     /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
     However, delay the fade out process for 2.5 seconds */
-    -webkit-animation: fadein 0.5s, fadeout 1s 3s;
-    animation: fadein 0.5s, fadeout 1s 3s;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
   }
   
   /* Animations to fade the snackbar in and out */
@@ -54,3 +74,79 @@ body {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
   } 
+
+
+#myProgress {
+    margin-top: .5rem;;
+    height : 0.3rem;
+}
+
+.input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
+  border-color: #ffc700;
+  box-shadow: 0 0 0 0.125em rgba(253, 233, 120, 0.25);
+}
+
+
+.bolder {
+  font-weight: 700;
+}
+.upper {
+  text-transform: uppercase;
+}
+
+.modal-card-head {
+  background-color: #ffc700;
+}
+
+@media screen and (max-width: 768px){
+  #snackbar {
+    bottom: 30%; /* 30px from the bottom */
+  }
+
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30%; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30%; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30%; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30%; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  } 
+
+  .modal-content, .modal-card {
+    margin: 0 20px;
+    max-height: calc(100vh - 160px);
+    overflow: auto;
+    position: relative;
+    width: 90%;
+  }
+
+  .column.is-three-quarters-mobile {
+    flex: none;
+    width: 100%;
+    margin: auto;
+  }
+  .columns {
+    width: 100%;
+}
+.columns.is-mobile {
+  width: 100%;
+}
+.columns.is-mobile > .column.is-half {
+  flex: none;
+  margin: auto;
+  width: 80%;
+
+}
+}
+

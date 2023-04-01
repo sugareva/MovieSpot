@@ -9,22 +9,59 @@
 
 </head>
 <body>
+    <div id="modal-js-example" class="modal">
+        <div class="modal-background">
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title bolder upper">Thanks for visiting!</h2>
+                    <button class="modal-close is-large" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <p>MovieSpot is a little game I made in a few days to train myself in JS (Vanilla) and to reuse some concepts I learned. <br />
+                        The goal is to find all the movies or series hidden behind images of places and movie sets.</p>
+                    <p id="textIndex"></p>
+                    <h3 class="mt-3 is-size-7">Icons used :</h3>
+                    <ul class="is-size-7">
+                        <li><a target="_blank" href="https://icons8.com/icon/MR39NpxEXFHr/trophy">Trophy icon by Icons8</a></li>
+                        <li><a target="_blank" href="https://icons8.com/icon/JCDjQ3zAwdDu/best-seller">Best Seller icon by Icons8</a></li>
+                        <li><a target="_blank" href="https://icons8.com/icon/u8FhdKl6q0sM/disappointed">Disappointed icon by Icons8</a></li>
+                        <li><a target="_blank" href="https://icons8.com/icon/61209/info-carré">Info Carré icon by Icons8</a></li>
+                    </ul>
+                    <p class="mt-5 bolder">Enjoy the game!</p>
+                </section>
+            </div>
+            
+        </div></div>
     <div class="columns is-mobile is-centered">
 
-        <div class="column is-half">
+        <div class="column is-half is-three-quarters-mobile">
         <div class="columns is-vcentered">
             <div class="column">
-            <img class="image is-96x96 is-clickable" onClick="refreshPage()" src="./img/MVSPT_logo.svg" />
+            <img class="logo image is-96x96 is-clickable" onClick="refreshPage()" src="./img/MVSPT_logo.svg" />
         </div>
-            <div class="box">
-            <div class="is-flex">
-            <img class="image is-24x24 mr-2" src="https://img.icons8.com/3d-fluency/94/null/trophy.png"/>
-            <p id="stage">0</p>
+            
+<div class="column is-three-quarters-mobile">
+    <div class="box">
+            <div class="is-flex is-justify-content-space-around">
+                <div class="is-flex is-flex-grow-1 ">
+                    <img class="image is-24x24 mr-2" src="https://img.icons8.com/3d-fluency/94/null/trophy.png"/>
+            <p class="bolder" id="stage">0</p>
+                </div>
+            
+            <div>
+                <button class="js-modal-trigger" data-target="modal-js-example">
+                    <div class="icon is-clickable">
+                        <img id="iconModal" src="https://img.icons8.com/ios-glyphs/30/null/info-squared.png" onmouseover="hover(this);" onmouseout="unhover(this);"/>
+                    </span>
+                </button>
+            </div>
             </div>
             <div class="">
             <progress class="progress is-small is-success" id="myProgress" value="1" max="24"></progress>
         </div>
         </div>
+</div>
+
     </div>
     <div class="card" >
     <div class="card-image">
@@ -34,20 +71,21 @@
     </div>
     <div class="card-content">
         <div class="columns is-centered">
-            <div class="column is-half">
+            <div class="column is-half is-three-quarters-mobile">
         <div class="field has-addons">
             <div class="control ">
- <input class="input is-medium " placeholder="Where is it from?" type="text" size="20" id="userInput" name="name">
+ <input class="input is-medium" placeholder="Where is it from?" type="text" size="20" id="userInput" name="name">
             </div>
             <div class="control">
-                 <button class="button is-black is-medium " id="next-button">Try</button>
+                 <button class="button is-black is-medium upper bolder" id="next-button">Try</button>
             </div>
        </div>
       </div>
         </div>
-        
+       
     </div>
 </div>
+
     <div class="score">
         
         
