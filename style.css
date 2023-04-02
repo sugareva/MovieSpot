@@ -3510,8 +3510,8 @@ a.tag:hover {
 }
 
 .input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
-  border-color: #485fc7;
-  box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
+  border-color: #ffc700;
+  box-shadow: 0 0 0 0.125em rgba(253, 233, 120, 0.25);
 }
 
 .input[disabled], .textarea[disabled], .select select[disabled],
