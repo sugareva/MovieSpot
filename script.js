@@ -56,6 +56,7 @@ function checkSeries() {
   //if good answer, continue the game
   for (let i = 0; i < possibleNames.length; i++) {
     if (userInput === possibleNames[i].toLowerCase()) {
+    hint.textContent = "Hint"
     hintDiv.classList.add("is-hidden");
     successToast();
     document.getElementById("message").textContent = yesses[getRandomInt(0, yesses.length - 1)];
@@ -69,6 +70,7 @@ function checkSeries() {
   errorToast();
   document.getElementById("message").textContent = `Your final score is ${currentIndex}. Try again!` 
   currentIndex = 0;
+  hint.textContent = "Hint"
   hintDiv.classList.add("is-hidden");
   input.value = "";
   showSeries(currentIndex);

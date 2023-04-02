@@ -32,7 +32,7 @@
       {
         name: ["American Horror Story", "AHS"],
         image: "./img/img23.jpg",
-        hint: "Just an asylum, initials are enough"
+        hint: "Just an asylum, it's an anthology series, initials are enough"
       },
       {
         name: ["Alien", "Aliens"],
