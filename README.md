@@ -2,7 +2,7 @@
 
 ## 🧐 What is MovieSpot?
 
-MovieSpot is a little game that I designed in 2 days. The goal is to find all the movies and series associated with the images of places and settings.
+[MovieSpot](https://moviespotgame.netlify.app/) is a little game that I designed in 2 days. The goal is to find all the movies and series associated with the images of places and settings.
 This little project allowed me to reuse concepts I learned and to improve my JS skills, especially DOM and object manipulation.
 For the front-end, I used [Bulma](https://bulma.io/) to learn about CSS libraries.
 
