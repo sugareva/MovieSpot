@@ -45,7 +45,6 @@
             <div class="is-flex is-align-content-flex-end is-justify-content-space-around">
                 <div class="is-flex is-flex-grow-1">
                     <img class="image is-24x24 mr-2" src="https://img.icons8.com/3d-fluency/94/null/trophy.png"/>
-                    <span id="tag" class="tag is-info is-light mr-2">Newbie</span>
                     <p class="bolder" id="stage">0</p>
                 </div>
             
@@ -64,32 +63,43 @@
 </div>
 
     </div>
-    <div class="card" >
+<div id="gameCard" class="card" >
     <div class="card-image">
         <figure class="image image is-16by9">
         <img id="img" src="">
-    </figure>     
+        </figure>     
     </div>
     <div class="card-content">
         <div class="columns is-centered">
             <div class="column is-half is-three-quarters-mobile">
-        <div class="field has-addons">
-            <div class="control ">
- <input class="input is-medium" placeholder="Where is it from?" type="text" size="20" id="userInput" name="name">
+                <div class="field has-addons">
+                    <div class="control ">
+                        <input class="input is-medium" placeholder="Where is it from?" type="text" size="20" id="userInput" name="name">
+                    </div>
+                    <div class="control">
+                        <button class="button is-black is-medium upper bolder" id="next-button">Try</button>
+                    </div>
+                </div>
             </div>
-            <div class="control">
-                 <button class="button is-black is-medium upper bolder" id="next-button">Try</button>
-            </div>
-       </div>
-      </div>
         </div>
-       
+    </div>
+</div>
+
+<div id="successCard" class="card is-hidden" >
+    <div class="card-content">
+        <div class="columns is-centered">
+            <div class="column is-three-quarters is-three-quarters-mobile">
+               <h1 class="upper bolder">Congrats!</h1>
+               <p>Despite the difficulty, your keen eyes and impressive film culture managed to lead you to victory.
+                I am impressed, and I thank you for playing MovieSpot.
+                You can play it again by pressing the button below.</p>
+                <button onClick="refreshPage()" class="button is-black is-medium upper bolder mt-4">Play Again</button>
+            </div>
+        </div>
     </div>
 </div>
 
     <div class="score">
-        
-        
         </div>  
         </div>
     </div>
@@ -107,5 +117,6 @@
         </div>
     <script src="./movies.js"></script>
     <script src="./script.js"></script>
+
 </body>
 </html>

@@ -7,14 +7,6 @@ const nextButton = document.querySelector("#next-button");
 const input = document.querySelector("#userInput");
 let toastIcon = document.getElementById("toast");
 const infoIndex = document.getElementById("textIndex");
-const levelTag = document.getElementById("tag");
-
-function changeLevel(currentIndex){
-  if(currentIndex > 2){
-    levelTag.textContent = "Challenger";
-  }
-}
-
 
 
 infoIndex.textContent = `You have ${movies.length} pieces to find and each mistake makes you start again from the beginning. Several spellings are accepted,
@@ -26,12 +18,22 @@ function getRandomInt(min, max) {
 
 
 function showSeries(index) {
+  if (currentIndex === 24){
+      stage.textContent = `Current score : ${currentIndex} / ${movies.length}`;
+      document.getElementById("myProgress").value = currentIndex; 
+      const gameCard = document.getElementById("gameCard");
+      gameCard.classList.add("is-hidden");
+      const successCard = document.getElementById("successCard");
+      successCard.classList.remove("is-hidden");
+      return;
+      }
     img.src = movies[index].image;
     stage.textContent = `Current score : ${currentIndex} / ${movies.length}`;
     document.getElementById("myProgress").value = currentIndex; 
   }
 
 showSeries(currentIndex);
+
 
 function checkSeries() {
   const userInput = input.value.toLowerCase();
@@ -40,16 +42,15 @@ function checkSeries() {
 
   for (let i = 0; i < possibleNames.length; i++) {
     if (userInput === possibleNames[i].toLowerCase()) {
+      
       successToast();
       document.getElementById("message").textContent = yesses[getRandomInt(0, yesses.length - 1)];
       currentIndex++;
-      changeLevel();
       input.value = "";
       showSeries(currentIndex);
-      return;
+      return;   
     }
-  }
-
+  } 
   // si aucune correspondance n'est trouvée
   errorToast();
   document.getElementById("message").textContent = `Your final score is ${currentIndex}. Try again!` 
@@ -198,3 +199,4 @@ let i = 0;
   function unhover(element) {
     element.src = 'https://img.icons8.com/ios-glyphs/30/null/info-squared.png';
   }
+
