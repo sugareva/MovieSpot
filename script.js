@@ -6,6 +6,10 @@ const nextButton = document.querySelector("#next-button");
 const input = document.querySelector("#userInput");
 let toastIcon = document.getElementById("toast");
 const infoIndex = document.getElementById("textIndex");
+const hint = document.getElementById("hint");
+const hintDiv = document.getElementById("hintDiv");
+
+
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -29,6 +33,8 @@ function showSeries(index) {
   stage.textContent = `Current score : ${currentIndex} / ${movies.length}`;
   //Update progress bar
   document.getElementById("myProgress").value = currentIndex; 
+  const hintText = document.getElementById("hintText");
+  hintText.textContent = `${movies[currentIndex].hint}`;
 
 }
 
@@ -50,6 +56,7 @@ function checkSeries() {
   //if good answer, continue the game
   for (let i = 0; i < possibleNames.length; i++) {
     if (userInput === possibleNames[i].toLowerCase()) {
+    hintDiv.classList.add("is-hidden");
     successToast();
     document.getElementById("message").textContent = yesses[getRandomInt(0, yesses.length - 1)];
     currentIndex++;
@@ -62,6 +69,7 @@ function checkSeries() {
   errorToast();
   document.getElementById("message").textContent = `Your final score is ${currentIndex}. Try again!` 
   currentIndex = 0;
+  hintDiv.classList.add("is-hidden");
   input.value = "";
   showSeries(currentIndex);
 }
@@ -205,3 +213,16 @@ and the game does not take into account capital letters.`;
       }
     });
   });
+
+hint.addEventListener("click", function() {
+ if (hintDiv.classList.contains("is-hidden")){
+  hintDiv.classList.remove("is-hidden");
+  hint.textContent = "Hide hint"
+ } else {
+  hintDiv.classList.add("is-hidden");
+  hint.textContent = "Hint"
+ }
+
+ 
+ 
+});

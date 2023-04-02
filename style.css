@@ -19,11 +19,18 @@ body {
   width: 100%;
   padding-bottom: 2em;
 }
+
+.yellow-text{
+  color: #d1a300;
+}
 .bolder {
   font-weight: 700;
 }
 .upper {
   text-transform: uppercase;
+}
+#hint:hover{
+color: #ffc700;
 }
 
 .js-modal-trigger {
@@ -2540,10 +2547,10 @@ div.icon-text {
 }
 
 .notification {
-  background-color: whitesmoke;
+  background-color: #ffc80011;
   border-radius: 4px;
   position: relative;
-  padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+  padding: 0.8rem 2.5rem 0.8rem 1.5rem;
 }
 
 .notification a:not(.button):not(.dropdown-item) {
