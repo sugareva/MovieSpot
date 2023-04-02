@@ -12,4 +12,6 @@ There are a number of images to find. The goal is to find them all in a row, wit
 For each image, several spellings are valid and capital letters are not taken into account.
 If a correct answer is found, you move on to the next image and the progress counter is updated. However, if a wrong answer is given, the game resets.
 
+To make the game a little easier, there's a hint you can toggle. Of course, the aim is to finish the game without it, but some of the images are tricky.
+
 :warning: This project is for educational purpose only. All the images I used are the property of their authors.

@@ -163,6 +163,7 @@ transform: translateY(-5px);
     overflow: auto;
     position: relative;
     width: 90%;
+    top: 8%;
   }
 
   .column.is-three-quarters-mobile {

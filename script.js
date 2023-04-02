@@ -33,6 +33,16 @@ function showSeries(index) {
   stage.textContent = `Current score : ${currentIndex} / ${movies.length}`;
   //Update progress bar
   document.getElementById("myProgress").value = currentIndex; 
+  if(currentIndex < 5) {
+    document.getElementById("myProgress").classList.add("is-danger") 
+  } else if(currentIndex > 5 && currentIndex < 14){
+    document.getElementById("myProgress").classList.remove("is-danger")
+    document.getElementById("myProgress").classList.add("is-info") 
+  } else {
+    document.getElementById("myProgress").classList.remove("is-info")
+    document.getElementById("myProgress").classList.add("is-success") 
+  }
+
   const hintText = document.getElementById("hintText");
   hintText.textContent = `${movies[currentIndex].hint}`;
 
