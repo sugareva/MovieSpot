@@ -11,7 +11,14 @@ body {
   overflow: hidden;
   padding-top : 3%;
 }
-
+.footer {
+  text-align: center;
+  background: transparent;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  padding-bottom: 2em;
+}
 .bolder {
   font-weight: 700;
 }
@@ -112,6 +119,9 @@ transform: translateY(-5px);
 /* RESPONSIVE ADJUSTMENTS*/
 
 @media screen and (max-width: 768px){
+  .footer {
+    display: none;
+  }
   #stage {
     font-size: .8em;
     line-height: 24px;
