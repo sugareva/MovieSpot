@@ -9,11 +9,12 @@
 
 </head>
 <body>
+    <!--Modal page visible when the info button is clicked-->
     <div id="modal-js-example" class="modal">
         <div class="modal-background">
             <div class="modal-card">
                 <header class="modal-card-head">
-                    <p class="modal-card-title bolder upper">Thanks for visiting!</h2>
+                    <p class="modal-card-title bolder upper">🙏 Thanks for visiting!</h2>
                     <button class="modal-close is-large" aria-label="close"></button>
                 </header>
                 <section class="modal-card-body">
@@ -29,92 +30,88 @@
                     </ul>
                     <p class="mt-5 bolder">Enjoy the game!</p>
                 </section>
-            </div>
-            
-        </div></div>
+            </div>  
+        </div>
+    </div>
+    <!--Page content-->
     <div class="columns is-mobile is-centered">
-
         <div class="column is-half is-three-quarters-mobile">
-        <div class="columns is-vcentered">
-            <div class="column">
-            <img class="logo image is-96x96 is-clickable" onClick="refreshPage()" src="./img/MVSPT_logo.svg" />
-        </div>
-            
-<div class="column is-three-quarters-mobile">
-    <div class="box">
-            <div class="is-flex is-align-content-flex-end is-justify-content-space-around">
-                <div class="is-flex is-flex-grow-1">
-                    <img class="image is-24x24 mr-2" src="https://img.icons8.com/3d-fluency/94/null/trophy.png"/>
-                    <p class="bolder" id="stage">0</p>
+            <div class="columns is-vcentered">
+                    <!--Logo-->
+                <div class="column">
+                <img class="logo image is-96x96 is-clickable" onClick="refreshPage()" src="./img/MVSPT_logo.svg" alt="Movie Spot logo"/>
                 </div>
-            
-            <div>
-                <button class="js-modal-trigger" data-target="modal-js-example">
-                    <div class="icon is-clickable">
-                        <img id="iconModal" src="https://img.icons8.com/ios-glyphs/30/null/info-squared.png" onmouseover="hover(this);" onmouseout="unhover(this);"/>
-                    </span>
-                </button>
-            </div>
-            </div>
-            <div class="">
-            <progress class="progress is-small is-success" id="myProgress" value="1" max="24"></progress>
-        </div>
-        </div>
-</div>
-
-    </div>
-<div id="gameCard" class="card" >
-    <div class="card-image">
-        <figure class="image image is-16by9">
-        <img id="img" src="">
-        </figure>     
-    </div>
-    <div class="card-content">
-        <div class="columns is-centered">
-            <div class="column is-half is-three-quarters-mobile">
-                <div class="field has-addons">
-                    <div class="control ">
-                        <input class="input is-medium" placeholder="Where is it from?" type="text" size="20" id="userInput" name="name">
+                    <!--Info and Progress box-->
+                <div class="column is-three-quarters-mobile">
+                    <div class="box">
+                        <div class="is-flex is-align-content-flex-end is-justify-content-space-around">
+                            <div class="is-flex is-flex-grow-1">
+                                <img class="image is-24x24 mr-2" src="https://img.icons8.com/3d-fluency/94/null/trophy.png"/>
+                                <p class="bolder" id="stage">0</p>
+                            </div>
+                            <div>
+                                <button class="js-modal-trigger" data-target="modal-js-example">
+                                <div class="icon is-clickable">
+                                    <img id="iconModal" class="modal-icon" src="https://img.icons8.com/ios-glyphs/30/null/info-squared.png" onmouseover="hover(this);" onmouseout="unhover(this);"/>
+                                </button>
+                                </div>
+                            </div>
+                            <div class="">
+                                <progress class="progress is-small is-success" id="myProgress" value="1" max="24"></progress>
+                            </div>
+                        </div>
                     </div>
-                    <div class="control">
-                        <button class="button is-black is-medium upper bolder" id="next-button">Try</button>
+                 </div>
+            <!--Game box-->
+            <div id="gameCard" class="card" >
+                <div class="card-image">
+                    <figure class="image image is-16by9">
+                    <img id="img" src="">
+                    </figure>     
+                 </div>
+                <div class="card-content">
+                    <div class="columns is-centered">
+                        <div class="column is-half is-three-quarters-mobile">
+                            <div class="field has-addons">
+                                <div class="control ">
+                                    <input class="input is-medium" placeholder="Where is it from?" type="text" size="20" id="userInput" name="name">
+                                </div>
+                                <div class="control">
+                                <button class="button is-black is-medium upper bolder" id="next-button">Try</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Success box if you finish the game-->
+            <div id="successCard" class="card is-hidden" >
+                <div class="card-content">
+                    <div class="columns is-centered">
+                        <div class="column is-three-quarters is-three-quarters-mobile">
+                            <h1 class="upper bolder">Congrats!</h1>
+                            <p>Despite the difficulty, your keen eyes and impressive film culture managed to lead you to victory.
+                            I am impressed, and I thank you for playing MovieSpot.
+                            You can play it again by pressing the button below.</p>
+                            <button onClick="refreshPage()" class="button is-black is-medium upper bolder mt-4">Play Again</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<div id="successCard" class="card is-hidden" >
-    <div class="card-content">
-        <div class="columns is-centered">
-            <div class="column is-three-quarters is-three-quarters-mobile">
-               <h1 class="upper bolder">Congrats!</h1>
-               <p>Despite the difficulty, your keen eyes and impressive film culture managed to lead you to victory.
-                I am impressed, and I thank you for playing MovieSpot.
-                You can play it again by pressing the button below.</p>
-                <button onClick="refreshPage()" class="button is-black is-medium upper bolder mt-4">Play Again</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-    <div class="score">
-        </div>  
-        </div>
-    </div>
+    <!--Toast-->
     <div id="snackbar">
         <div class="columns is-vcentered">
             <div class="column">
                 <div class="is-flex">
-                <img id="toast" class="image is-24x24 mr-2" src="https://img.icons8.com/3d-fluency/94/null/best-seller.png"/>
-                 <p id="message"></p>
+                    <img id="toast" class="image is-24x24 mr-2" src="https://img.icons8.com/3d-fluency/94/null/best-seller.png"/>
+                    <p id="message"></p>
                 </div>
             </div>
-        </div>
-        
-    
-        </div>
+        </div>   
+    </div>
+    <!--JS Scripts-->
     <script src="./movies.js"></script>
     <script src="./script.js"></script>
 

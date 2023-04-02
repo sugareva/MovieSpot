@@ -28,6 +28,14 @@ body {
     transform: translateY(-10px);
   }
 
+.modal-icon {
+    transition: transform 250ms;
+    }
+    
+.modal-icon:hover {
+      transform: translateY(-5px);
+    }
+
 
  /* The snackbar - position it at the bottom and in the middle of the screen */
  #snackbar {
