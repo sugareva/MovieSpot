@@ -9,7 +9,7 @@ body {
   background-size: 18px 18px;
   min-height: 100vh;
   overflow: hidden;
-  padding-top : 3%;
+  padding-top : 2%;
 }
 .footer {
   text-align: center;
@@ -435,7 +435,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  padding: 0;
+
 }
 
 h1,
@@ -5510,7 +5510,7 @@ button.dropdown-item.is-active {
   max-height: calc(100vh - 160px);
   overflow: auto;
   position: relative;
-  width: 100%;
+  width: 90%;
 }
 
 @media screen and (min-width: 769px) {
@@ -5542,7 +5542,7 @@ button.dropdown-item.is-active {
 .modal-card-head,
 .modal-card-foot {
   align-items: center;
-  background-color: whitesmoke;
+  background-color: #ffc700;
   display: flex;
   flex-shrink: 0;
   justify-content: flex-start;
@@ -5551,7 +5551,6 @@ button.dropdown-item.is-active {
 }
 
 .modal-card-head {
-  border-bottom: 1px solid #dbdbdb;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
@@ -7280,7 +7279,7 @@ label.panel-block:hover {
 
 .columns.is-mobile > .column.is-half {
   flex: none;
-  width: 50%;
+
 }
 
 .columns.is-mobile > .column.is-one-third {
@@ -7477,7 +7476,6 @@ label.panel-block:hover {
   }
   .column.is-three-quarters-mobile {
     flex: none;
-    width: 75%;
   }
   .column.is-two-thirds-mobile {
     flex: none;
@@ -12023,7 +12021,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .footer {
-  background-color: #fafafa;
-  padding: 3rem 1.5rem 6rem;
+  padding: 3rem 1.5rem 3rem;
 }
 /*# sourceMappingURL=bulma.css.map */
