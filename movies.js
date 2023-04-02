@@ -8,6 +8,10 @@
         image: "./img/img2.jpg"
       },
       {
+        name: ["Parasite", "Parasites"],
+        image: "./img/img5.jpg"
+      },
+      {
         name: ["The Office", "Office"],
         image: "./img/img17.jpg"
       },
@@ -45,7 +49,7 @@
       },
       {
         name: ["Dexter"],
-        image: "./img/img1"
+        image: "./img/img1.jpg"
       },
       {
         name: ["The Sopranos", "Sopranos", "The Soprano"],
@@ -91,8 +95,5 @@
         name: ["Batman Begins", "The Dark Knight", "Dark Knight", "Batman"],
         image: "./img/img11.jpg"
       },
-      {
-        name: ["The Truman Show", "Truman Show"],
-        image: "./img/img5.jpg"
-      },
+     
   ];

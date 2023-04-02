@@ -7,6 +7,15 @@ const nextButton = document.querySelector("#next-button");
 const input = document.querySelector("#userInput");
 let toastIcon = document.getElementById("toast");
 const infoIndex = document.getElementById("textIndex");
+const levelTag = document.getElementById("tag");
+
+function changeLevel(currentIndex){
+  if(currentIndex > 2){
+    levelTag.textContent = "Challenger";
+  }
+}
+
+
 
 infoIndex.textContent = `You have ${movies.length} pieces to find and each mistake makes you start again from the beginning. Several spellings are accepted,
 and the game does not take into account capital letters.`;
@@ -34,6 +43,7 @@ function checkSeries() {
       successToast();
       document.getElementById("message").textContent = yesses[getRandomInt(0, yesses.length - 1)];
       currentIndex++;
+      changeLevel();
       input.value = "";
       showSeries(currentIndex);
       return;
