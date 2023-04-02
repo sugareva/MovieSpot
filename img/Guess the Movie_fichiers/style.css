@@ -4506,7 +4506,7 @@ fieldset[disabled] .select select:hover {
 
 .field.has-addons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .field.has-addons .control:not(:last-child) {
