@@ -3,15 +3,22 @@
 @import './node_modules/bulma/css/bulma.css';
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #ffc700;
-
+  font-family: 'Inter', sans-serif;
+  background-color: #ffc700;
   background-image:  linear-gradient(#ffd336 0.9px, transparent 0.9px), linear-gradient(to right, #ffd336 0.9px, #ffc700 0.9px);
   background-size: 18px 18px;
-    min-height: 100vh;
-    overflow: hidden;
-    padding-top : 3%;
+  min-height: 100vh;
+  overflow: hidden;
+  padding-top : 3%;
 }
+
+.bolder {
+  font-weight: 700;
+}
+.upper {
+  text-transform: uppercase;
+}
+
 .js-modal-trigger {
   border : none;
   background-color: transparent;
@@ -20,22 +27,28 @@ body {
   top: 20%;
 }
 
+.modal-card-head {
+  background-color: #ffc700;
+}
+/*HOVER TRANSITIONS */
+
 .logo {
   transition: transform 250ms;
-  }
-  
+
+}
 .logo:hover {
-    transform: translateY(-10px);
-  }
+transform: translateY(-10px);
+}
 
 .modal-icon {
-    transition: transform 250ms;
-    }
+transition: transform 250ms;
+}
     
 .modal-icon:hover {
-      transform: translateY(-5px);
-    }
+transform: translateY(-5px);
+}
 
+/* TOAST (SNACKBAR)*/
 
  /* The snackbar - position it at the bottom and in the middle of the screen */
  #snackbar {
@@ -84,30 +97,21 @@ body {
   } 
 
 
+/* Progress bar styling */
 #myProgress {
     margin-top: .5rem;;
     height : 0.3rem;
 }
 
+/* input focus styling */
 .input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
   border-color: #ffc700;
   box-shadow: 0 0 0 0.125em rgba(253, 233, 120, 0.25);
 }
 
-
-.bolder {
-  font-weight: 700;
-}
-.upper {
-  text-transform: uppercase;
-}
-
-.modal-card-head {
-  background-color: #ffc700;
-}
+/* RESPONSIVE ADJUSTMENTS*/
 
 @media screen and (max-width: 768px){
-
   #stage {
     font-size: .8em;
     line-height: 24px;
@@ -151,15 +155,14 @@ body {
   }
   .columns {
     width: 100%;
-}
-.columns.is-mobile {
-  width: 100%;
-}
-.columns.is-mobile > .column.is-half {
-  flex: none;
-  margin: auto;
-  width: 80%;
-
-}
+  }
+  .columns.is-mobile {
+    width: 100%;
+  }
+  .columns.is-mobile > .column.is-half {
+    flex: none;
+    margin: auto;
+    width: 80%;
+  }
 }
 
