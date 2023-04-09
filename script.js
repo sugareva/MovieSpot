@@ -85,7 +85,7 @@ function checkSeries() {
   if (lives > 1){
     lives = lives - 1;
     errorToast();
-    document.getElementById("message").textContent = `Sorry, that's not the answer. You still have ${lives} try left!` 
+    document.getElementById("message").textContent = `Not really... You have ${lives} try left!` 
 
     hint.textContent = "Hint"
     hintDiv.classList.add("is-hidden");
