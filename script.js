@@ -8,6 +8,10 @@ let toastIcon = document.getElementById("toast");
 const infoIndex = document.getElementById("textIndex");
 const hint = document.getElementById("hint");
 const hintDiv = document.getElementById("hintDiv");
+const livesText = document.getElementById("lives");
+let lives = 2;
+
+
 
 
 
@@ -17,6 +21,7 @@ function getRandomInt(min, max) {
 
 
 function showSeries(index) {
+  livesText.textContent = lives;
   if (currentIndex === 24){
     const gameCard = document.getElementById("gameCard");
     const successCard = document.getElementById("successCard");
@@ -45,6 +50,7 @@ function showSeries(index) {
 
   const hintText = document.getElementById("hintText");
   hintText.textContent = `${movies[currentIndex].hint}`;
+  
 
 }
 
@@ -76,7 +82,19 @@ function checkSeries() {
     return;   
     }
   } 
+  if (lives > 1){
+    lives = lives - 1;
+    errorToast();
+    document.getElementById("message").textContent = `Sorry, that's not the answer. You still have ${lives} try left!` 
+
+    hint.textContent = "Hint"
+    hintDiv.classList.add("is-hidden");
+    input.value = "";
+    showSeries(currentIndex);
+    return;
+  }
   // if there's no correspondance
+  lives = 2;
   errorToast();
   document.getElementById("message").textContent = `Your final score is ${currentIndex}. Try again!` 
   currentIndex = 0;
