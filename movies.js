@@ -1,5 +1,15 @@
  const movies = [
     {
+      name: ["Hobbit", "The Hobbit", "Lord of the Rings","LOTR","Le seigneur des anneaux"],
+      image: "./img/img24.jpg",
+      hint: "In a hole in the ground there lived a ?"
+    },
+    {
+      name: ["Star Wars"],
+      image: "./img/img25.jpg",
+      hint: "It's a planet with two suns"
+    },
+    {
       name: ["Friends", "Friend"],
       image: "./img/img12.jpg",
       hint: "Monica and Chandler spent time here"
@@ -15,6 +25,12 @@
         hint: "There is a super creepy basement in this house"
       },
       {
+        name: ["The Walking Dead", "Walking Dead"],
+        image: "./img/img19.jpg",
+        hint: "The main protagonist wakes up from his coma in this hospital"
+
+      },
+      {
         name: ["The Office", "Office"],
         image: "./img/img17.jpg",
         hint : "Behind this door, they sell paper"
@@ -24,15 +40,11 @@
         image: "./img/img9.jpg",
         hint :"Just an haunted hotel, THE place for a writer in need of inspiration"
       },
-      {
-        name: ["Better Call Saul", "Call Saul", "Better Call"],
-        image: "./img/img18.jpg",
-        hint: "A netflix spin-off of the best series of all time"
-      },
+      
       {
         name: ["American Horror Story", "AHS"],
         image: "./img/img23.jpg",
-        hint: "Just an asylum, it's an anthology series, initials are enough"
+        hint: "One season takes place in an asylum, An anthology series, initials are enough"
       },
       {
         name: ["Alien", "Aliens"],
@@ -45,7 +57,7 @@
         hint : "Really, you haven't recognized Bree Van De Kamp's house?"
       },
       {
-        name: ["The Haunting of Hill House", "The Haunting Of", "Haunting Of", "Haunting Of Hill House"],
+        name: ["The Haunting of Hill House", "The Haunting Of", "Haunting Of", "Haunting Of Hill House", "Hill Bouse", "Bly manor", "The Haunting of Bly Manor"],
         image: "./img/img22.jpg",
         hint: "This house is so haunted that it's the name of the show"
       },
@@ -62,13 +74,9 @@
       {
         name: ["Dexter"],
         image: "./img/img1.jpg",
-        hint: "Just a Miami's serial killer home"
+        hint: "Just a Miami's serial killer (who kills serial killer) home"
       },
-      {
-        name: ["The Sopranos", "Sopranos", "The Soprano"],
-        image: "./img/img3.png",
-        hint: "It's about a gangster who sees a shrink, oh and his name is Tony"
-      },
+      
       {
         name: ["Shameless"],
         image: "./img/img21.jpg",
@@ -85,25 +93,30 @@
         hint: "It's about ads and dramas"
       },
       {
+        name: ["Better Call Saul", "Call Saul", "Better Call"],
+        image: "./img/img18.jpg",
+        hint: "A netflix spin-off, It's all good man"
+      },
+      {
         name: ["Tenet"],
         image: "./img/img6.jpg",
         hint: "There was a chase with inverted cars on this highway"
       },
       {
-        name: ["The Big Lebowski", "Big Lebowski"],
+        name: ["The Big Lebowski", "Big Lebowski", "Big Lebowsky", "The Big Lebowsky", "Lebowski", "Lebowsky"],
         image: "./img/img7.jpg",
         hint: "I think they are spreading ashes here"
       },
-      {
-        name: ["The Walking Dead", "Walking Dead"],
-        image: "./img/img19.jpg",
-        hint: "The main protagonist wakes up from his coma in this hospital"
-
-      },
+      
       {
         name: ["American Psycho"],
         image: "./img/img10.jpg",
         hint: "It really looks like the appartment of a psycho"
+      },
+      {
+        name: ["The Sopranos", "Sopranos", "The Soprano"],
+        image: "./img/img3.png",
+        hint: "It's about a gangster who sees a shrink, oh and his name is Tony"
       },
       {
         name: ["Monk"],
